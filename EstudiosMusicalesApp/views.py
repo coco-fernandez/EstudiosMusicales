@@ -25,3 +25,11 @@ def bandas(request):
     return render(request,'ProyectoCoderApp/bandas.html',ctx)
     pass
 
+def crear_estudio(request):
+    pass
+
+def crear_productor(request):
+    pass
+
+def crear_banda(request):
+    pass
