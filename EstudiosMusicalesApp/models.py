@@ -19,5 +19,8 @@ class Productor(models.Model):
     apellido=models.CharField(max_length=30)
     email=models.EmailField()
     
+    class Meta:
+        verbose_name_plural="Productores"
+    
 
 
