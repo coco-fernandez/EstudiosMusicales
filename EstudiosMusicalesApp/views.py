@@ -11,7 +11,6 @@ def estudios(request):
     estudios=Estudio.objects.all()
     ctx={"estudios":estudios}
     return render(request,'ProyectoCoderApp/estudios.html',ctx)
-    pass
 
 def productores(request):
     productores=Productor.objects.all()
