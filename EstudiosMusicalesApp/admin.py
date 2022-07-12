@@ -21,7 +21,7 @@ class ProductorAdmin(admin.ModelAdmin):
 
     list_display = ('nombre', 'apellido', 'email')
     search_fields = ('nombre', 'apellido', 'email')
-    # readonly_fields=("profesion",)
+
 
 
 admin.site.register(Estudio,EstudioAdmin)

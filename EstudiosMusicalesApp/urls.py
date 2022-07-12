@@ -12,6 +12,6 @@ urlpatterns = [
     path('crear_estudio/',crear_estudio,name="crear_estudio"),
     path('crear_productor/',crear_productor,name="crear_productor"),
     path('crear_banda/',crear_banda,name="crear_banda"),
-    path('base',base,name="base"),
+    # path('base/',base,name="base"),
     
 ]
