@@ -32,3 +32,6 @@ def crear_productor(request):
 
 def crear_banda(request):
     pass
+
+def base (request):
+    return render(request,'EstudiosMusicalesApp/base.html',{})
