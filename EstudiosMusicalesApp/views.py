@@ -26,28 +26,34 @@ def bandas(request):
     pass
 
 def crear_estudio(request):
-
-    if request.method=="POST":    #post
-        
-        formulario=crear_estudio(request.POST)
-        
-        if formulario.is_valid():
-            
-            info_estudio=formulario.cleaned_data
-        
-            estudio=Estudio(nombre=info_estudio["nombre"],ubicacion=info_estudio["ubicacion"],cantidad_salas=info_estudio["cantidad_salas"])
-            
-            estudio.save()    #guarda en la DB
-            
-            return redirect("estudios")
-        
-        else:
-            return render(request,'EstudiosMusicalesApp/crear_estudio.html',{"form":formulario})
     
-    else:
-        formulario=crear_estudio()
+    return render(request,'EstudiosMusicalesApp/formulario_estudio.html',{})
+
+
+
+
+
+    # if request.method=="POST":    #post
         
-        return render(request,'EstudiosMusicalesApp/crear_estudio.html',{"form":formulario})
+    #     formulario=crear_estudio(request.POST)
+         
+    #     if formulario.is_valid():
+            
+    #         info_estudio=formulario.cleaned_data
+        
+    #         estudio=Estudio(nombre=info_estudio["nombre"],ubicacion=info_estudio["ubicacion"],cantidad_salas=info_estudio["cantidad_salas"])
+            
+    #         estudio.save()    #guarda en la DB
+            
+    #         return redirect("estudios")
+        
+    #     else:
+    #         return render(request,'EstudiosMusicalesApp/crear_estudio.html',{"form":formulario})
+    
+    # else:
+    #     formulario=crear_estudio()
+        
+    #     return render(request,'EstudiosMusicalesApp/crear_estudio.html',{"form":formulario})
 
 def crear_productor(request):
     pass

@@ -1,0 +1,24 @@
+{% extends 'EstudiosMusicalesApp/base.html' %}
+{% load static %}
+
+{% block tituloPagina %}
+Registrar Estudios y Salas de ensayo
+{% endblock %}
+
+{% block contenidoPagina %}
+<h2>¡Registra tu Estudio de grabacion o Sala de ensayo!</h2>
+<br>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <p>Nombre: <input type="text" name="" id="nombre"> </p>
+
+    <p>Ubicación: <input type="text" name="" id="ubicacion"> </p>
+
+    <p>Cantidad de salas: <input type="number" name="cantidad_salas" id="" min="0" > </p>
+
+    <input type="submit" value="Crear">
+
+</form>
+<a href="{% url 'crear_estudio' %}"> + Registrar nuevo Estudio/Sala de ensayo </a>
+{% endblock %}
