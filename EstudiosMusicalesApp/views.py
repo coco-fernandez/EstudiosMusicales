@@ -27,39 +27,57 @@ def bandas(request):
 
 def crear_estudio(request):
     
-    return render(request,'EstudiosMusicalesApp/formulario_estudio.html',{})
-
-
-
-
-
-    # if request.method=="POST":    #post
-        
-    #     formulario=crear_estudio(request.POST)
-         
-    #     if formulario.is_valid():
-            
-    #         info_estudio=formulario.cleaned_data
-        
-    #         estudio=Estudio(nombre=info_estudio["nombre"],ubicacion=info_estudio["ubicacion"],cantidad_salas=info_estudio["cantidad_salas"])
-            
-    #         estudio.save()    #guarda en la DB
-            
-    #         return redirect("estudios")
-        
-    #     else:
-    #         return render(request,'EstudiosMusicalesApp/crear_estudio.html',{"form":formulario})
     
-    # else:
-    #     formulario=crear_estudio()
+    if request.method == "POST":
         
-    #     return render(request,'EstudiosMusicalesApp/crear_estudio.html',{"form":formulario})
+        info_formulario = request.POST
+
+        estudio=Estudio(nombre=info_formulario["nombre"], ubicacion=info_formulario["ubicacion"], cantidad_salas=int(info_formulario["cantidad_salas"]))
+
+        estudio.save()
+                        
+        return redirect("estudios")
+    
+    else:
+        return render(request,'EstudiosMusicalesApp/formulario_estudio.html',{})
+    
+    
+
 
 def crear_productor(request):
-    pass
+    
+    
+    if request.method == "POST":
+        
+        info_formulario = request.POST
 
+        productor=Productor(nombre=info_formulario["nombre"], apellido=info_formulario["apellido"], email=int(info_formulario["email"]))
+
+        productor.save()
+                        
+        return redirect("productores")
+    
+    else:
+        return render(request,'EstudiosMusicalesApp/formulario_productor.html',{})
+    
+    
 def crear_banda(request):
-    pass
+    
+    
+    if request.method == "POST":
+        
+        info_formulario = request.POST
+
+        banda=Banda(nombre=info_formulario["nombre"], genero=info_formulario["genero"], cantidad_salas=info_formulario["cantidad_salas"])
+
+        banda.save()
+                        
+        return redirect("bandas")
+    
+    else:
+        return render(request,'EstudiosMusicalesApp/formulario_banda.html',{})
+
+    
 
 def base (request):
     return render(request,'EstudiosMusicalesApp/base.html',{})

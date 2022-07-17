@@ -1,0 +1,25 @@
+{% extends 'EstudiosMusicalesApp/base.html' %}
+{% load static %}
+
+{% block tituloPagina %}
+
+<h2>Bandas</h2>
+{% endblock %}
+
+{% block contenidoPagina %}
+<h2>¡Registrate como Productor!</h2>
+<br>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <p>Nombre: <input type="text" name="" id="nombre_productor" maxlength="30"> </p>
+
+    <p>Apellido: <input type="text" name="" id="apellido" maxlength="30"> </p>
+
+    <p>Correo Electrónico: <input type="number" name="email" id="" min="0" > </p>
+
+    <input type="submit" value="Regristrar">
+
+</form>
+<a href="{% url 'crear_productor' %}"> + Registrar nuevo Productor </a>
+{% endblock %}

@@ -9,7 +9,7 @@ class Estudio(models.Model):
     
 
 class Banda(models.Model):
-    nombre=models.CharField(max_length=30)
+    nombre=models.CharField(max_length=30,null=True,)
     genero=models.CharField(max_length=30)
     cantidad_integrantes=models.IntegerField()
     

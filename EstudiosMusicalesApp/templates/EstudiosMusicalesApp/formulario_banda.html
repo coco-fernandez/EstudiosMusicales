@@ -1,0 +1,25 @@
+{% extends 'EstudiosMusicalesApp/base.html' %}
+{% load static %}
+
+{% block tituloPagina %}
+
+<h2>Bandas</h2>
+{% endblock %}
+
+{% block contenidoPagina %}
+<h2>¡Registra tu Banda!</h2>
+<br>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <p>Nombre: <input type="text" name="" id="nombre_banda" maxlength="30"> </p>
+
+    <p>Género: <input type="text" name="" id="genero" maxlength="30"> </p>
+
+    <p>Cantidad de integrantes: <input type="number" name="cantidad_integrantes" id="" min="0" > </p>
+
+    <input type="submit" value="Regristrar">
+
+</form>
+<a href="{% url 'crear_banda' %}"> + Registrar nuevo Estudio/Sala de ensayo </a>
+{% endblock %}

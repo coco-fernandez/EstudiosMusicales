@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block tituloPagina %}
+
 Registrar Estudios y Salas de ensayo
 {% endblock %}
 
@@ -11,9 +12,9 @@ Registrar Estudios y Salas de ensayo
 <form action="" method="post">
     {% csrf_token %}
 
-    <p>Nombre: <input type="text" name="" id="nombre"> </p>
+    <p>Nombre: <input type="text" name="" id="nombre_sala" maxlength="30"> </p>
 
-    <p>Ubicación: <input type="text" name="" id="ubicacion"> </p>
+    <p>Ubicación: <input type="text" name="" id="ubicacion" maxlength="30"> </p>
 
     <p>Cantidad de salas: <input type="number" name="cantidad_salas" id="" min="0" > </p>
 

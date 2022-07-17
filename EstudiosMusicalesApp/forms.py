@@ -6,7 +6,7 @@ class crear_estudio(forms.Form):
     cantidad_salas=forms.IntegerField()
     
 class crear_banda(forms.Form):
-    nombre=forms.CharField(max_length=30,label="Nombre")
+    nombre_banda=forms.CharField(max_length=30,label="Nombre")
     genero=forms.CharField(max_length=30,label="Género")
     cantidad_integrantes=forms.IntegerField()
     
